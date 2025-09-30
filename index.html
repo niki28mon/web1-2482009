@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!--
+    Nama  : Marchelyna Nickyta Mondigir
+    NIM   : 2482009
+-->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width",
+    initial-scale=1" />
+    <title>Websiteku</title>
+    <style>
+        :root{
+            --maxw: 1100px;
+            --gap: 16px;
+        }
+        *{box-sizing: border-box}
+
+        
+        
+        body{
+            margin: 0;
+            font-family: system-ui, Arial, sans-serif;
+            line-height: 1.6; /* Mengatur jarak antar baris kata*/
+            color:#ff0026;
+        }
+
+        .page{
+            display: grid;
+            grid-template-areas: 
+            "header header"
+            "main aside"
+            "footer footer";
+            grid-template-columns: 4fr 1fr; /* 80% 20% */
+            gap: var(--gap);
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding: 16px;
+        }
+
+        header{
+            grid-area: header;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #81cbff;
+        }
+
+        .logo{
+            width: 72px;
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        nav{
+            margin-left: auto;
+        }
+        
+        .nav{
+            display: flex;
+            gap: 12px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        main{
+            grid-area: main;
+        }
+        aside{
+            grid-area: aside;
+        }
+        .card{
+            border: 1px solid #eee;
+            border-radius: 12px;
+            padding: 12px;
+            margin-bottom: var(--gap);
+            background: #555;
+            font-size: .9rem;
+        }
+
+    
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!-- menggunakan Header untuk Navigation-->
+        <header>
+            <div class="logo" aria-label="logo">
+                <img src="img/logo.png" alt="Logo UNAI">
+            </div>
+            <nava aria-label="Main Navigation">
+                <ul class="nav">
+                    <li>HOME</li>
+                    <li><a href="about.html">About</a></li>
+                    <li>My Holiday</li>
+                    <li>Contact</li>
+                </ul>
+            </nava>
+        </header>
+        <main id="Home">
+            <h1>Websiteku</h1>
+            <p>
+                Selamat datang di website sederhanaku
+            </p>
+        </main>
+        <aside aria-label="Side Menu">
+            <div class="card">
+                <h3>Menu Tambahan</h3>
+                <ul>
+                    <li>Menu 1</li>
+                    <li>Menu 2</li>
+                    <li>Menu 3</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Pesan Sponsor</h3>
+                <p>Aku suka dia tapi dia suka siapa?</p>
+            </div>
+        </aside>
+        <footer>
+            2025 &copy; Marchelyna Nickyta Mondigir
+        </footer>
+    </div>
+</body>
+</html>
